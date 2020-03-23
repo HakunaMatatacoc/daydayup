@@ -1346,4 +1346,7 @@ ps:静态初始化器和实例初始化器不能return
         3.此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
     
     -git status命令可以让我们时刻掌握仓库当前的状态
+        要随时掌握工作区的状态，使用git status命令。
+        
+        如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
 ```
