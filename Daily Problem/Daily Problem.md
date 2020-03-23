@@ -1327,3 +1327,22 @@ ps:静态初始化器和实例初始化器不能return
 
 16.MAC 显示隐藏文件:Command + Shift + .
 ```
+
+<h2>2020.3.24</h2>
+
+```
+1.git学习
+    -初始化git仓库：git init
+    -添加文件到git仓库，分两步:
+        1. git add <file>
+        2.git commit -m "XXXXX"
+    ps:可以反复多次add到暂存区，commit一次就可以把暂存区add的文件全都提交到本地仓库中
+
+    -关联远程库
+        1.$ git remote add origin git@github.com:HakunaMatatcoc/learngit.git
+        2.把本地库的内容推送到远程：git push -u origin master
+        ps:由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，
+           还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+        3.此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
+
+```
