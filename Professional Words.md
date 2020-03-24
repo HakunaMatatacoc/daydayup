@@ -24,4 +24,6 @@ audit   审计
 useage  用法
 escape sequence 转义序列
 extract 提取
+MD5(Message-Digest Algorithm)   信息摘要算法
+SHA1(Secure-Hash-Algorithm)     安全hash算法
 </pre>
