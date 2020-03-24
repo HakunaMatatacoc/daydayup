@@ -30,4 +30,7 @@ discard     丢弃
 authenticity    真实性，可靠性
 hub     中心，枢纽，中转站
 Github
+feature     特征，特点
+is ahead of    在....前面
+abort   中止，退出，舍弃
 </pre>
