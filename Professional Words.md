@@ -33,7 +33,6 @@ Github
 feature     特征，特点
 is ahead of    在....前面
 abort   中止，退出，舍弃
-新增几个字
 graph 图形，图表，图解
 graphic adj 图形的，绘画似的，图解的
 fatal  有害的，致命的
