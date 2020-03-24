@@ -33,5 +33,9 @@ Github
 feature     特征，特点
 is ahead of    在....前面
 abort   中止，退出，舍弃
-新增两个字
+<<<<<<< HEAD
+新增三个字
+=======
+新增三个字
+>>>>>>> feature1
 </pre>
