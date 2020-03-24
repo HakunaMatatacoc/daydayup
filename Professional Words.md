@@ -39,4 +39,5 @@ fatal  有害的，致命的
 abbrev 缩写（abbreviation）
 integrate   整合
 commit 提交
+encrypt 加密
 </pre>
