@@ -37,4 +37,5 @@ graph 图形，图表，图解
 graphic adj 图形的，绘画似的，图解的
 fatal  有害的，致命的
 abbrev 缩写（abbreviation）
+integrate   整合
 </pre>
