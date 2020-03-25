@@ -1335,16 +1335,25 @@ ps:静态初始化器和实例初始化器不能return
     -初始化git仓库：git init
     -添加文件到git仓库，分两步:
         1. git add <file>    git add .  将整个项目中有改变的文件放到暂存区
-        2.git commit -m "XXXXX"
+        2. git commit -m "XXXXX"
     ps:可以反复多次add到暂存区，commit一次就可以把暂存区add的文件全都提交到本地仓库中
+
+    git add . 会遇到的问题：
+      warning: CRLF will be replaced by LF in XXX . The file will have its original line 
+      endings in your working directory.
+      解决方案：git config core.autocrlf false  //将设置中自动转换功能关闭
+      原因：CRLF : windows 环境下的换行符
+           LF ： linux 环境下的换行符
+            这个错误的意思，就是文件中存在两种环境的换行符，git 会自动替换 CRLF 为 LF ，所以提示警告。
+            至于为什么会出现这种情况的发生，因为公司的电脑是 mac,所以我怀疑是粘贴复制导致存在两种类型的换行符。
+
 
     -关联远程库
         1.$ git remote add origin git@github.com:HakunaMatatcoc/learngit.git
         2.把本地库的内容推送到远程：git push -u origin master
         ps:由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的
-        master分支内容推送
-        的远程新的master分支，
-           还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+        master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，
+        在以后的推送或者拉取时就可以简化命令。
         3.此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
     
     -git status命令可以让我们时刻掌握仓库当前的状态
