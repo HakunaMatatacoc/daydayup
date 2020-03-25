@@ -1334,7 +1334,7 @@ ps:静态初始化器和实例初始化器不能return
 1.git学习
     -初始化git仓库：git init
     -添加文件到git仓库，分两步:
-        1. git add <file>
+        1. git add <file>    git add .  将整个项目中有改变的文件放到暂存区
         2.git commit -m "XXXXX"
     ps:可以反复多次add到暂存区，commit一次就可以把暂存区add的文件全都提交到本地仓库中
 
@@ -1361,9 +1361,12 @@ ps:静态初始化器和实例初始化器不能return
       （注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，
       当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。  
 
-      e.g.将版本回退到上一个版本：git reset --hard HEAD^
+      e.g. 将版本回退到上一个版本：git reset --hard HEAD^
       再git log已经看不到之前的最新版本了。如果还想恢复到之前最新的版本，可以趁窗口没有关闭，找到之前的操作的
       commit id再reset,commit id输入前几位就可以识别了
+      e.g. git reset --hard 1094a
+
+      如果窗口关闭了也不打紧，git reflog可以记录每次命令，输入这个可以查看到之前的操作
 
 2.Excel表格选中列然后双击可以将数据都显示出来
 ```
