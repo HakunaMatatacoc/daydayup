@@ -1341,7 +1341,8 @@ ps:静态初始化器和实例初始化器不能return
     -关联远程库
         1.$ git remote add origin git@github.com:HakunaMatatcoc/learngit.git
         2.把本地库的内容推送到远程：git push -u origin master
-        ps:由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送
+        ps:由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的
+        master分支内容推送
         的远程新的master分支，
            还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
         3.此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
@@ -1357,12 +1358,14 @@ ps:静态初始化器和实例初始化器不能return
       git的commit id是SHA1计算出来的一个非常大的数字，十六进制表示
 
     -版本回退
-      首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交1094adb...
+      首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的
+      提交1094adb...
       （注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，
       当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。  
 
       e.g. 将版本回退到上一个版本：git reset --hard HEAD^
-      再git log已经看不到之前的最新版本了。如果还想恢复到之前最新的版本，可以趁窗口没有关闭，找到之前的操作的
+      再git log已经看不到之前的最新版本了。如果还想恢复到之前最新的版本，可以趁窗口没有关闭，
+      找到之前的操作的
       commit id再reset,commit id输入前几位就可以识别了
       e.g. git reset --hard 1094a
 
@@ -1374,10 +1377,12 @@ ps:静态初始化器和实例初始化器不能return
         git add把文件从工作区>>>>暂存区，git commit把文件从暂存区>>>>仓库，
         git diff查看工作区和暂存区差异，
         git diff --cached查看暂存区和仓库差异，
-        git diff HEAD 查看工作区和仓库的差异，git diff HEAD -- <filename>
-        git add的反向命令git checkout，撤销工作区修改，即把暂存区最新版本转移到工作区，git checkout -- file
+        git diff HEAD 查看工作区和仓库的差异，git diff HEAD --<filename>
+        git add的反向命令git checkout，撤销工作区修改，即把暂存区最新版本转移到工作区，
+        git checkout -- file
         git commit的反向命令git reset HEAD，就是把仓库最新版本转移到暂存区。
         为什么Git比其他版本控制系统设计得优秀，因为Git跟踪并管理的是修改，而非文件
+        hh
 
 2.Excel表格选中列然后双击可以将数据都显示出来
 ```
