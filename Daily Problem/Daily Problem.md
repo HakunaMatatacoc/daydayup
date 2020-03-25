@@ -1382,7 +1382,6 @@ ps:静态初始化器和实例初始化器不能return
         git checkout -- file
         git commit的反向命令git reset HEAD，就是把仓库最新版本转移到暂存区。
         为什么Git比其他版本控制系统设计得优秀，因为Git跟踪并管理的是修改，而非文件
-        hh
 
 2.Excel表格选中列然后双击可以将数据都显示出来
 ```
