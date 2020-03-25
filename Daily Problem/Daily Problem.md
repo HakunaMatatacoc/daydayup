@@ -1378,9 +1378,23 @@ ps:静态初始化器和实例初始化器不能return
         git diff查看工作区和暂存区差异，
         git diff --cached查看暂存区和仓库差异，
         git diff HEAD 查看工作区和仓库的差异，git diff HEAD --<filename>
-        git add的反向命令git checkout，撤销工作区修改，即把暂存区最新版本转移到工作区，
-        git checkout -- file
-        git commit的反向命令git reset HEAD，就是把仓库最新版本转移到暂存区。
+
+        在工作区修改了文件, 但是还没有add到暂存区
+        执行下面的命令, 可以恢复到与最后的版本一致的状态, 也就是修改前的状态
+        git checkout -- 文件名
+
+        已经add到暂存区, 然后在工作区修改了文件
+        执行下面的命令, 可以恢复到和暂存区一致的状态
+        git checkout -- 文件名
+
+        前面2种情况, 都是在工作区修改了文件, 修改的状态还没有add到暂存区
+        修改了文件, 又add到了暂存区, 但是还没有commit
+        执行下面的命令, 可以将暂存区的文件退回到工作区
+        git reset HEAD 文件名
+
+        退回到工作区的文件是被修改过的, 那么再执行下面的命令, 可以恢复到未修改的状态
+        git checkout -- 文件名
+        
         为什么Git比其他版本控制系统设计得优秀，因为Git跟踪并管理的是修改，而非文件
 
 2.Excel表格选中列然后双击可以将数据都显示出来
