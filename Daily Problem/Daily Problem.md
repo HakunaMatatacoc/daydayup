@@ -1356,6 +1356,7 @@ ps:静态初始化器和实例初始化器不能return
     -git log可以查看到最近的三次提交，排序从最近到最远，如果觉得输出信息太多可以输入：
       git log --pretty=oneline
       git的commit id是SHA1计算出来的一个非常大的数字，十六进制表示
+      git log查出来之后按空格，可以显示更多之前的提交
 
     -版本回退
       首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的
@@ -1381,11 +1382,11 @@ ps:静态初始化器和实例初始化器不能return
 
         在工作区修改了文件, 但是还没有add到暂存区
         执行下面的命令, 可以恢复到与最后的版本一致的状态, 也就是修改前的状态
-        git checkout -- 文件名
+        git checkout --文件名
 
         已经add到暂存区, 然后在工作区修改了文件
         执行下面的命令, 可以恢复到和暂存区一致的状态
-        git checkout -- 文件名
+        git checkout --文件名
 
         前面2种情况, 都是在工作区修改了文件, 修改的状态还没有add到暂存区
         修改了文件, 又add到了暂存区, 但是还没有commit
@@ -1393,9 +1394,15 @@ ps:静态初始化器和实例初始化器不能return
         git reset HEAD 文件名
 
         退回到工作区的文件是被修改过的, 那么再执行下面的命令, 可以恢复到未修改的状态
-        git checkout -- 文件名
-        
+        git checkout --文件名
+
         为什么Git比其他版本控制系统设计得优秀，因为Git跟踪并管理的是修改，而非文件
 
 2.Excel表格选中列然后双击可以将数据都显示出来
+
+3.右键断点可以输入条件
+
+4.clickhouse truncate:TRUNCATE TABLE pumper.retailers 
+
+5.idea删除一个文件然后commit的时候也要将灰色的该文件勾选push
 ```
