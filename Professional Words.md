@@ -45,4 +45,6 @@ detect  检测，侦察
 up to date with 最新的
 vendor  供应商
 raw 原始
+compensation    补偿
+migration   移民
 </pre>
