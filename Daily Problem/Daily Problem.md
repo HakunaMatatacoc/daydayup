@@ -1456,4 +1456,6 @@ e.g.
 
   7.foramt函数sqlserver2008不支持，2012之后的版本才支持，但是convert函数都支持，用120或者23
     e.g.  CONVERT(varchar(32), vip_start_date, 120) AS register_date
+
+  8.IDEA 右键选择mark directory as可以标记文件夹类型
 ```

@@ -47,4 +47,5 @@ vendor  供应商
 raw 原始
 compensation    补偿
 migration   移民
+schema  模式
 </pre>
