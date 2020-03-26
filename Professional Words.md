@@ -40,6 +40,9 @@ abbrev 缩写（abbreviation）
 integrate   整合
 commit 提交
 encrypt 加密
+decrypt 解密
 detect  检测，侦察
 up to date with 最新的
+vendor  供应商
+raw 原始
 </pre>

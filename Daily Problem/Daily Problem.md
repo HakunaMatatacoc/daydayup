@@ -1429,4 +1429,26 @@ ps:静态初始化器和实例初始化器不能return
 4.clickhouse truncate:TRUNCATE TABLE pumper.retailers 
 
 5.idea删除一个文件然后commit的时候也要将灰色的该文件勾选push
+
+6.clickhouse join写法
+e.g.
+    select
+    a.erp_id,
+    a.retailer_code,
+    b.erp_name,
+    b.driver,
+    b.database_type,
+    a.connection_properties 
+  from
+    pumper.retailers as a 
+  all left join pumper.erps as b
+  using erp_id
+
+  关于all和any:设置为 ANY 时，重复键的数据会被忽略（仅一条用于连接）
+              设置为 ALL 时，重复键的数据都会用于连接
+
+  这里是指join的子表中如果有多个可以关联的键，只取其中一条数据join
+  就sqlserver与mysql来说，主表的数据join子表，主表的数据都保留。子表可能只保留不重复的键来join，可以先join再group by，但是这样效率会很低，因为n*n数据量很大，场景如：订单流水作为主表去join订单表，订单表没有重复键，这里就不用group by了。clickhouse的any操作意义和group by是一样的
+  
+  ASOF用于join条件不是等式的情况下
 ```
