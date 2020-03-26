@@ -48,4 +48,5 @@ raw 原始
 compensation    补偿
 migration   移民
 schema  模式
+recursive   递归
 </pre>

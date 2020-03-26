@@ -866,9 +866,40 @@ ps:静态初始化器和实例初始化器不能return
          推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https
          e.g. git clone https://github.com/michaelliao/gitskills.git
 
+    -git 分支
+        查看分支：git branch
+        创建分支：git branch <name>
+        切换分支：git checkout <name>或者git switch <name>
+        创建+切换分支：git checkout -b <name>或者git switch -c <name>
+        合并某分支到当前分支：git merge <name>  ps:其实就是指针的指向发生了变化
+        删除分支：git branch -d <name>
+        ps:提倡使用switch来创建和切换分支，因为checkout命令和撤销修改一样，容易混淆
+
+    -git 冲突
+        当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+        解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
+        用git log --graph命令可以看到分支合并图。
+        git log --graph --pretty=oneline --abbrev-commit 看起来更明晰
+        参考文章：https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344
+
+    -git 分支管理策略
+        通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
+        如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看
+        出分支信息
+        准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward：
+         git merge --no-ff -m "merge with no-ff" dev
+         因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
+```
+ ![](17.jpg)
+ ![](18.jpg)
+
+ ```
+  
+ ```
+    
     
 
-
+```
 2.Excel表格选中列然后双击可以将数据都显示出来
 
 3.右键断点可以输入条件
