@@ -1415,7 +1415,7 @@ ps:静态初始化器和实例初始化器不能return
         误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。
 
     -git 从远程克隆项目
-         git clone git@github.com:michaelliao/gitskills.git
+         git clone git@github.com:HakunaMatatacoc/GitDemo.git
          这种方式默认使用ssh
          但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次
          推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https
@@ -1454,8 +1454,8 @@ e.g.
   
   ASOF用于join条件不是等式的情况下
 
-  7.foramt函数sqlserver2008不支持，2012之后的版本才支持，但是convert函数都支持，用120或者23
+7.foramt函数sqlserver2008不支持，2012之后的版本才支持，但是convert函数都支持，用120或者23
     e.g.  CONVERT(varchar(32), vip_start_date, 120) AS register_date
 
-  8.IDEA 右键选择mark directory as可以标记文件夹类型
+8.IDEA 右键选择mark directory as可以标记文件夹类型
 ```
