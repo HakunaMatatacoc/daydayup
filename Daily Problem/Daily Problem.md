@@ -890,8 +890,8 @@ ps:静态初始化器和实例初始化器不能return
         如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看
         出分支信息
         准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward：
-         git merge --no-ff -m "merge with no-ff" dev
-         因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
+        git merge --no-ff -m "merge with no-ff" dev
+        因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
 ```
  ![](17.jpg)
  ![](18.jpg)

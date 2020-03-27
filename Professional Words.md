@@ -49,4 +49,5 @@ compensation    补偿
 migration   移民
 schema  模式
 recursive   递归
+stash   藏，窝
 </pre>
