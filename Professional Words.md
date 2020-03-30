@@ -54,4 +54,5 @@ release 发布
 preserve 保留
 patch 补丁
 hunk 块
+enabled 已启用
 </pre>
