@@ -798,6 +798,7 @@ ps:静态初始化器和实例初始化器不能return
 
     -关联远程库
         1.$ git remote add origin git@github.com:HakunaMatatcoc/learngit.git
+        这里的origin是给远程库定义的名字
         2.把本地库的内容推送到远程：git push -u origin master
         ps:由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的
         master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，
