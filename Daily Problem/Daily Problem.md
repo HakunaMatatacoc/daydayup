@@ -966,7 +966,10 @@ ps:静态初始化器和实例初始化器不能return
         git配置别名：https://www.liaoxuefeng.com/wiki/896043488029600/898732837407424
     -git pull = git fetch + git merge
 ```
-
+![](26.jpg)
+```
+    git 只merge单个文件：git checkout --patch  <分支名> <路径名>
+```
 ```
 2.Excel表格选中列然后双击可以将数据都显示出来
 
