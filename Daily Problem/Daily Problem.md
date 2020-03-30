@@ -804,6 +804,8 @@ ps:静态初始化器和实例初始化器不能return
         在以后的推送或者拉取时就可以简化命令。
         3.此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
         简写:git push
+
+        git remote rm origin删除与远程库的关联（origin是远程库的名字）
     
     -git status命令可以让我们时刻掌握仓库当前的状态
         要随时掌握工作区的状态，使用git status命令。
@@ -876,7 +878,21 @@ ps:静态初始化器和实例初始化器不能return
         创建+切换分支：git checkout -b <name>或者git switch -c <name>
         合并某分支到当前分支：git merge <name>  ps:其实就是指针的指向发生了变化
         删除分支：git branch -d <name>
+        git branch -D <name>强制删除分支
+        git branch -a查看所有分支，包括远程的
         ps:提倡使用switch来创建和切换分支，因为checkout命令和撤销修改一样，容易混淆
+
+        假设当前分支为master，需要创建的分支是my-test
+        git checkout -b my-test (git switch -c my-test) //在当前分支下创建my-test的本地分支分支
+        git push origin my-test  //将my-test分支推送到远程
+        git branch --set-upstream-to=origin/my-test //将本地分支my-test关联到远程分支my-test上   
+        git branch -a //查看远程分支 
+        此时远程分支my-test已经创建好了，并且本地的分支已经关联到远程分支上
+        本地push代码以后会push到关联的远程分支上。
+
+        删除本地分支：git branch -d 分支名
+        强制删本地：git branch -D 分支名
+        删除远程分支：git push origin --delete 分支名
 
     -git 冲突
         当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
@@ -892,6 +908,31 @@ ps:静态初始化器和实例初始化器不能return
         准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward：
         git merge --no-ff -m "merge with no-ff" dev
         因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
+
+    -git Bug分支，stash，Rebase操作参考网上教程
+
+    -git 标签管理
+        命令git tag <tagname>用于新建一个标签，默认为HEAD(最新提交)，也可以指定一个commit id
+        git tag <tagname> <commitid>
+        命令git tag -a <tagname> -m "blablabla..." <commitid>可以指定标签信息
+        命令git tag可以查看所有标签
+        注意，标签不是按时间顺序列出，而是按字母排序的。可以用git show <tagname>查看标签信息
+
+        命令git push origin <tagname>可以推送一个本地标签；
+        命令git push origin --tags可以推送全部未推送过的本地标签；
+        命令git tag -d <tagname>可以删除一个本地标签；
+        命令git push origin :refs/tags/<tagname>可以删除一个远程标签,删除远程标签先把本地标签删除
+
+    -github
+        在GitHub上，可以任意Fork开源仓库
+        自己拥有Fork后的仓库的读写权限
+        可以推送pull request给官方仓库来贡献代码
+
+    -gitee
+        一个本地库能不能既关联GitHub，又关联Gitee呢？
+        答案是肯定的，因为git本身是分布式版本控制系统，可以同步到另外一个远程库，当然也可以同步到另外两个远程库。
+        使用多个远程库时，我们要注意，git给远程库起的默认名称是origin，如果有多个远程库，我们需要用不同的名称来标识不同的远程库。
+   
 ```
 
  ![](17.jpg)
