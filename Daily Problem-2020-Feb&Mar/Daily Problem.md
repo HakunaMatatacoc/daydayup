@@ -807,6 +807,7 @@ ps:静态初始化器和实例初始化器不能return
         简写:git push
 
         git remote rm origin删除与远程库的关联（origin是远程库的名字）
+        git remote -v 可以看到远程仓库信息
     
     -git status命令可以让我们时刻掌握仓库当前的状态
         要随时掌握工作区的状态，使用git status命令。
