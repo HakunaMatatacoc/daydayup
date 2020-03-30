@@ -893,12 +893,20 @@ ps:静态初始化器和实例初始化器不能return
         git merge --no-ff -m "merge with no-ff" dev
         因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
 ```
+
  ![](17.jpg)
  ![](18.jpg)
 
  ```
-  
- ```
+    -git 多人协作
+    git remote -v，显示更详细的信息
+```
+![](19.jpg)
+![](20.jpg)
+![](21.jpg)
+```
+
+```
     
     
 
