@@ -909,8 +909,21 @@ ps:静态初始化器和实例初始化器不能return
         准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward：
         git merge --no-ff -m "merge with no-ff" dev
         因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
+   
+```
 
-    -git Bug分支，stash，Rebase操作参考网上教程
+ ![](17.jpg)
+ ![](18.jpg)
+
+ ```
+    -git 多人协作
+    git remote -v，显示更详细的信息
+```
+![](19.jpg)
+![](20.jpg)
+![](21.jpg)
+```
+      -git Bug分支，stash，Rebase操作参考网上教程
 
     -git 标签管理
         命令git tag <tagname>用于新建一个标签，默认为HEAD(最新提交)，也可以指定一个commit id
@@ -933,25 +946,19 @@ ps:静态初始化器和实例初始化器不能return
         一个本地库能不能既关联GitHub，又关联Gitee呢？
         答案是肯定的，因为git本身是分布式版本控制系统，可以同步到另外一个远程库，当然也可以同步到另外两个远程库。
         使用多个远程库时，我们要注意，git给远程库起的默认名称是origin，如果有多个远程库，我们需要用不同的名称来标识不同的远程库。
-   
 ```
-
- ![](17.jpg)
- ![](18.jpg)
-
- ```
-    -git 多人协作
-    git remote -v，显示更详细的信息
-```
-![](19.jpg)
-![](20.jpg)
-![](21.jpg)
-```
-
-```
+![](22.jpg)
     
-    
-
+```
+    -git 自定义git
+    git config --global color.ui true
+    这样，Git会适当地显示不同的颜色，比如git status命令：
+```
+![](23.jpg)
+```
+    -.gitignore
+```
+![](24.jpg)
 ```
 2.Excel表格选中列然后双击可以将数据都显示出来
 
