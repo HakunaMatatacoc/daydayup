@@ -51,4 +51,5 @@ schema  模式
 recursive   递归
 stash   藏，窝
 release 发布
+preserve 保留
 </pre>
