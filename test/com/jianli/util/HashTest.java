@@ -1,4 +1,4 @@
-package com.jianli;
+package com.jianli.util;
 
 public class HashTest {
     private String title;

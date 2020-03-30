@@ -1,4 +1,4 @@
-package com.jianli;
+package com.jianli.util;
 
 public class CloneTest implements Cloneable{
     private double value;
