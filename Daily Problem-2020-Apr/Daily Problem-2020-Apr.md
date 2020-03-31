@@ -6,4 +6,6 @@
     或者
     tar -zxvf demo.jar   #省略目标目录，会解压到当前工作目录下
     或者unzip dem0.jar
+
+2.airflow的采集SQL在3307的dataservice_maintance.online_syc_jobs
 ```
