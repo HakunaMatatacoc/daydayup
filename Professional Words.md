@@ -56,4 +56,8 @@ patch 补丁
 hunk 块
 enabled 已启用
 layout  布局，设计，安排
+additivity  可加性
+relative    相对的，亲戚
+neutral 中性的，中立的  
+Threshold   阀，门槛，临界值
 </pre>

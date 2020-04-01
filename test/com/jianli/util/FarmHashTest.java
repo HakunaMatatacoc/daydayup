@@ -30,7 +30,7 @@ public class FarmHashTest {
 
     @Test
     public void InsertTest() throws Exception {
-        Reader in = new FileReader("./FarmHashRetailers.csv");
+        Reader in = new FileReader("/Users/lijian/Documents/superhirn自动化测试/ds-sit配置文件/FarmHashRetailers.csv");
         Iterable<CSVRecord> records = CSVFormat.EXCEL.parse(in);
         ArrayList<Retailer> retailers = new ArrayList();
 
@@ -66,11 +66,11 @@ public class FarmHashTest {
         pro.put("database", "xxx");
         pro.put("username", "xxx");
         pro.put("password", "xxx");
-        Connection connection = DriverManager.getConnection("jdbc:clickhouse://192.168.10.xxx:xxx", pro);
+        Connection connection = DriverManager.getConnection("jdbc:clickhouse://192.168.xxx.xxx:xxx", pro);
         Statement stmt = connection.createStatement();
 
         for (Retailer retailer : retailers) {
-            int erp_id = retailer.getErp_id();
+            Long erp_id = retailer.getErp_id();
             Long retailer_id = retailer.getRetailer_id();
             String retailer_code = retailer.getRetailer_code();
             String retailer_name = retailer.getRetailer_name();
@@ -86,110 +86,110 @@ public class FarmHashTest {
         connection.close();
     }
 
-    public int getErp(String org_code) {
-        int erp_id = 9999;
+    public long getErp(String org_code) {
+        long erp_id = 9999;
         switch (org_code) {
             case "eshop6":
-                erp_id = 0;
+                erp_id = Utils.farmHash64("eshop6");
                 break;
             case "wangsheng":
-                erp_id = 1;
+                erp_id = Utils.farmHash64("wangsheng");
                 break;
             case "eshop5":
-                erp_id = 2;
+                erp_id = Utils.farmHash64("eshop5");
                 break;
             case "huiyun":
-                erp_id = 3;
+                erp_id = Utils.farmHash64("huiyun");
                 break;
             case "chaowang":
-                erp_id = 4;
+                erp_id = Utils.farmHash64("chaowang");
                 break;
             case "baiwei_v10":
-                erp_id = 5;
+                erp_id = Utils.farmHash64("baiwei_v10");
                 break;
             case "eshop3":
-                erp_id = 6;
+                erp_id = Utils.farmHash64("eshop3");
                 break;
             case "eshop8":
-                erp_id = 7;
+                erp_id = Utils.farmHash64("eshop8");
                 break;
             case "eshop9":
-                erp_id = 8;
+                erp_id = Utils.farmHash64("eshop9");
                 break;
             case "eshop10":
-                erp_id = 9;
+                erp_id = Utils.farmHash64("eshop10");
                 break;
             case "kemai_waxiao":
-                erp_id = 10;
+                erp_id = Utils.farmHash64("kemai_waxiao");
                 break;
             case "eshop4":
-                erp_id = 11;
+                erp_id = Utils.farmHash64("eshop4");
                 break;
             case "haoke":
-                erp_id = 12;
+                erp_id = Utils.farmHash64("haoke");
                 break;
             case "kaibao":
-                erp_id = 13;
+                erp_id = Utils.farmHash64("kaibao");
                 break;
             case "guanjiapo":
-                erp_id = 14;
+                erp_id = Utils.farmHash64("guanjiapo");
                 break;
             case "bainian":
-                erp_id = 15;
+                erp_id = Utils.farmHash64("bainian");
                 break;
             case "chaoying":
-                erp_id = 16;
+                erp_id = Utils.farmHash64("chaoying");
                 break;
             case "haopu":
-                erp_id = 18;
+                erp_id = Utils.farmHash64("haopu");
                 break;
             case "chaoyingSQL":
-                erp_id = 19;
+                erp_id = Utils.farmHash64("chaoyingSQL");
                 break;
             case "boyou":
-                erp_id = 20;
+                erp_id = Utils.farmHash64("boyou");
                 break;
             case "huachuang":
-                erp_id = 21;
+                erp_id = Utils.farmHash64("huachuang");
                 break;
             case "jingyingshengshou":
-                erp_id = 22;
+                erp_id = Utils.farmHash64("jingyingshengshou");
                 break;
             case "lianwang":
-                erp_id = 23;
+                erp_id = Utils.farmHash64("lianwang");
                 break;
             case "shanghaihaidian":
-                erp_id = 24;
+                erp_id = Utils.farmHash64("shanghaihaidian");
                 break;
             case "yongyou":
-                erp_id = 25;
+                erp_id = Utils.farmHash64("yongyou");
                 break;
             case "changjietong":
-                erp_id = 26;
+                erp_id = Utils.farmHash64("changjietong");
                 break;
             case "yingtong":
-                erp_id = 27;
+                erp_id = Utils.farmHash64("yingtong");
                 break;
             case "kemai_kemai":
-                erp_id = 28;
+                erp_id = Utils.farmHash64("kemai_kemai");
                 break;
             case "lanlingkeji_v5":
-                erp_id = 29;
+                erp_id = Utils.farmHash64("lanlingkeji_v5");
                 break;
             case "baiwei":
-                erp_id = 30;
+                erp_id = Utils.farmHash64("baiwei");
                 break;
             case "ziri":
-                erp_id = 31;
+                erp_id = Utils.farmHash64("ziri");
                 break;
             case "aokai":
-                erp_id = 32;
+                erp_id = Utils.farmHash64("aokai");
                 break;
             case "eshop7":
-                erp_id = 33;
+                erp_id = Utils.farmHash64("eshop7");
                 break;
             case "taige":
-                erp_id = 34;
+                erp_id = Utils.farmHash64("taige");
                 break;
         }
         return erp_id;
@@ -197,7 +197,7 @@ public class FarmHashTest {
 
     @Data
     class Retailer {
-        private int erp_id;
+        private Long erp_id;
         private Long retailer_id;
         private String retailer_code;
         private String retailer_name;
