@@ -61,4 +61,5 @@ relative    相对的，亲戚
 neutral 中性的，中立的  
 Threshold   阀，门槛，临界值
 entry 条目，输入，入口
+notifacation 通知，警告
 </pre>
