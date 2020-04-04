@@ -63,4 +63,5 @@ Threshold   阀，门槛，临界值
 entry 条目，输入，入口
 notifacation 通知，警告
 Intention   意向
+obtain  获得，获取
 </pre>
