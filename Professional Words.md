@@ -65,4 +65,5 @@ notifacation 通知，警告
 Intention   意向
 obtain  获得，获取
 optimize    优化
+collapse    崩溃，倒塌，瓦解
 </pre>
