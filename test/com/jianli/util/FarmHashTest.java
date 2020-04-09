@@ -23,9 +23,13 @@ public class FarmHashTest {
 
     @Test
     public void Test02() throws Exception {
-        String json = "{\"url\" : \"jdbc:jtds:sqlserver://58.215.179.xxx:xxx/xxxx\", \"username\": \"xx\", \"password\": \"xxxxxx\"}\n";
-        String retailer_id = Utils.encrypt(json, "1^nSJoW1eBrd$kJASAGjINVFXm!u!74H");
+        String json = "{\"url\" : \"jdbc:jtds:sqlserver://122.112.225.135:24330/EYAYCS\", \"username\": \"aycs\", \"password\": \"aycs\"}";
+        String retailer_id = Utils.encrypt(json, "KtoaUuyS7a4whV0ki2wAjP6XQZhjF1cAtkcnP1t3OYPVzSDJrisndyVOKDs2rMZq");
         System.out.println("retailer_id: " + retailer_id);
+
+        String result = Utils.decrypt("e492d00ea1dac7e3b7719c80653f97c29177919bc50a33cf911465923e20f5be4f36211907af6eeaa86551ca8dcd6370b3ff61e5eaab93375c37c0631cfdee901d00dead08994474479a3200cb0e3dd1bda59395acdc3a5181368fe13b3031ad86753440eb30b0854069df947d30c43d",
+                "KtoaUuyS7a4whV0ki2wAjP6XQZhjF1cAtkcnP1t3OYPVzSDJrisndyVOKDs2rMZq");
+        System.out.println(result);
     }
 
     @Test
