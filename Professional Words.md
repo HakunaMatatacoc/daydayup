@@ -66,4 +66,33 @@ Intention   意向
 obtain  获得，获取
 optimize    优化
 collapse    崩溃，倒塌，瓦解
+selfie  自拍
+recipient   收件人
+broadcast   广播
+transaction 交易，买卖，合同
+utilize 利用
+disclose    透露，泄露
+backup  后备，备用，备份
+migrate 迁移
+instruct    指示    instruction n.
+lower-left conrner  左下角
+retrieve    找回，恢复
+upgrade 升级
+comprehensive   全面的，综合的
+audio   音讯
+montage 剪辑
+QRCode  quick-response code 二维码
+decorate    装饰
+agreement   协议，协定，合同
+released    已发布
+profile photo   头像照片，profile   轮廓
+deposit     存款，储蓄
+certifacate     证书
+merchant    商人，商业的
+receipt     收据
+deduction   扣除
+customize   定制
+top up  充值
+mobile top up   充值
+utilities   效用，公用事业
 </pre>
