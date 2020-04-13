@@ -27,6 +27,7 @@ extract 提取
 MD5(Message-Digest Algorithm)   信息摘要算法
 SHA1(Secure-Hash-Algorithm)     安全hash算法
 discard     丢弃
+deprecate   弃用
 authenticity    真实性，可靠性
 hub     中心，枢纽，中转站
 Github
@@ -95,4 +96,5 @@ customize   定制
 top up  充值
 mobile top up   充值
 utilities   效用，公用事业
+redundent   多余的
 </pre>
