@@ -97,4 +97,5 @@ top up  充值
 mobile top up   充值
 utilities   效用，公用事业
 redundent   多余的
+customize   定制
 </pre>
