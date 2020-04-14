@@ -30,3 +30,13 @@ Allure自动化测试生成页面步骤
     2.idea mac：ctrl + J显示注解带链接
     3.采集是通过enventTranferring传到sink，enventTransferring是用flume实现的，flume相当于RabbitMQ，传输格式用的是proto，相当于json
 ```
+
+<h2>2020.4.13</h2>
+
+```
+    1.如何从远程拉取分支到本地:
+        ps:在本地新建一个分支，并将远程库的代码下载到本地分支
+        step1:git fetch origin J_refactoring_raw_object_factory:J_refactoring_raw_object_factory
+        ps:将本地分支关联到远程分支
+        step2: git branch --set-upstream-to origin/J_refactoring_raw_object_factory
+```
