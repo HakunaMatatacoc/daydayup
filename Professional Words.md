@@ -98,4 +98,6 @@ mobile top up   充值
 utilities   效用，公用事业
 redundent   多余的
 customize   定制
+remark  备注
+remarkable  卓越的
 </pre>
