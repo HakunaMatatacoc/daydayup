@@ -82,7 +82,7 @@ public class FarmHashTest {
 
             String sql = "INSERT INTO pumper.retailers (erp_id, retailer_code, retailer_id, retailer_name, connection_type, " +
                     "connection_properties, status, pumping_types, compensation_types, memo) VALUES(" + erp_id + ",\'" + retailer_code + "\'," + retailer_id
-                    + ",\'" + retailer_name + "\',\'" + "SQL" + "\',\'" + connection_properties + "\'," + "1" + ",\'"
+                    + ",\'" + retailer_name + "\',\'" + "SQL" + "\',\'" + connection_properties + "\'," + "0" + ",\'"
                     + "member,order,order_coupon,order_line,stock" + "\',\'" + "" + "\',\'" + "" + "\'" + ");";
             stmt.execute(sql);
         }
