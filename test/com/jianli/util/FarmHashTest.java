@@ -67,10 +67,10 @@ public class FarmHashTest {
 
         //CLICKHOUSE数据库配置
         Properties pro = new Properties();
-        pro.put("database", "xxx");
-        pro.put("username", "xxx");
-        pro.put("password", "xxx");
-        Connection connection = DriverManager.getConnection("jdbc:clickhouse://192.168.xxx.xxx:xxx", pro);
+        pro.put("database", "pumper");
+        pro.put("username", "default");
+        pro.put("password", "joowing");
+        Connection connection = DriverManager.getConnection("jdbc:clickhouse://192.168.xx.xxx:xxxx", pro);
         Statement stmt = connection.createStatement();
 
         for (Retailer retailer : retailers) {
