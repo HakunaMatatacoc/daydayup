@@ -102,4 +102,5 @@ remark  备注
 remarkable  卓越的
 deprecated  不推荐使用
 process 处理，加工
+render  渲染
 </pre>

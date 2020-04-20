@@ -40,3 +40,7 @@ Allure自动化测试生成页面步骤
         ps:将本地分支关联到远程分支
         step2: git branch --set-upstream-to origin/J_refactoring_raw_object_factory
 ```
+
+<h2>2020.4.20</h2>
+
+- 全商户的表在3307database_maintainance的retailer_config中
