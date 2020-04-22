@@ -44,3 +44,11 @@ Allure自动化测试生成页面步骤
 <h2>2020.4.20</h2>
 
 - 全商户的表在3307database_maintainance的retailer_config中
+- clickhouse更新数据int64要进行转化
+```sql
+    ALTER TABLE pumper.retailers
+    UPDATE
+        erp_id = toInt64(7919623223928504487)
+    WHERE
+        retailer_code = 'fnqzbb';
+```
