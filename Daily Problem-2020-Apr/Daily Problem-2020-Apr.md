@@ -52,3 +52,4 @@ Allure自动化测试生成页面步骤
     WHERE
         retailer_code = 'fnqzbb';
 ```
+- 按住command再点击网页链接会用新的标签页打开
