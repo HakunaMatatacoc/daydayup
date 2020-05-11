@@ -17,4 +17,12 @@ dev环境：
     pumper-web-b5f4b4494-lgkbj                        1/1     Running   0          43h
 2.kubectl exec -it pumper-web-b5f4b4494-lgkbj -nidcquanhua bash
 3.查看日志
+
+将公网日志传到本机：
+1.将日志传输到222.73.36.230的家目录
+scp -P2002 ./pumper.log jian.li@222.73.36.230:~
+2.用SecureCRT连接到222.73.36.230
+sz pumper.log
+将文件传送到本地(地址在SecureCRT中设置,Properties -> X/Y/Zmodem)
 ```
+
