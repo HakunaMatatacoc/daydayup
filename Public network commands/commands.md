@@ -24,5 +24,8 @@ scp -P2002 ./pumper.log jian.li@222.73.36.230:~
 2.用SecureCRT连接到222.73.36.230
 sz pumper.log
 将文件传送到本地(地址在SecureCRT中设置,Properties -> X/Y/Zmodem)
+3.将pumper.log的ERROR grep出来
+cat ./pumper.log | grep -r "ERROR" > /Users/lijian/Desktop/pumper.error.log
+4.用脚本对pumper.error.log去重
 ```
 
