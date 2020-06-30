@@ -1,0 +1,3 @@
+actors中做了两层并发
+第一层：RetailerActor是商户的并发，对商户进行操作，是对数据库的并发
+第二层：PumpingActor是采集的并发，是对表的并发
