@@ -6,6 +6,7 @@ import org.springframework.util.SocketUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -61,14 +62,28 @@ public class StreamTest01 {
         skip(n):跳过元素,返回一个扔掉了前n个元素的流。若流中元素不足n个,则返回一个空流。与limit(n)互补
         distinct:筛选,通过流所生成元素的hashCode()和equals()去除重复元素
      */
+
+    //内部迭代:迭代操作由Stream API完成
     @Test
     public void test02(){
+        //中间操作:不会执行任何操作
         Stream<Employee> stream = employees.stream()
                                 .filter(e -> {
                                     System.out.println("Stream API的中间操作");
                                     return e.getAge() > 35;
                                 });
         //中间操作没有结果,须有终止操作
+        //终止操作:一次性执行全部内容,即"惰性求值"
         stream.forEach(System.out::println);
+    }
+
+    //外部迭代
+    @Test
+    public void test03(){
+        Iterator<Employee> it = employees.iterator();
+
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
     }
 }
